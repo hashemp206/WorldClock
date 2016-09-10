@@ -25,6 +25,8 @@
 		946691681D40E95A00C37386 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946691561D40E95A00C37386 /* NetworkEngine.swift */; };
 		946691691D40E95A00C37386 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946691571D40E95A00C37386 /* TableViewDataSource.swift */; };
 		946691731D41DAB400C37386 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946691721D41DAB400C37386 /* UIColor+Interpolation.swift */; };
+		94DA78DE1D83D73E0013950C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 94DA78DC1D83D73E0013950C /* LICENSE */; };
+		94DA78DF1D83D73E0013950C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 94DA78DD1D83D73E0013950C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		946691571D40E95A00C37386 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		946691581D40E95A00C37386 /* WorldClock-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WorldClock-Bridging-Header.h"; sourceTree = "<group>"; };
 		946691721D41DAB400C37386 /* UIColor+Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Interpolation.swift"; sourceTree = "<group>"; };
+		94DA78DC1D83D73E0013950C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		94DA78DD1D83D73E0013950C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				946691541D40E95A00C37386 /* Info.plist */,
 				946691551D40E95A00C37386 /* main.m */,
 				946691581D40E95A00C37386 /* WorldClock-Bridging-Header.h */,
+				94DA78DC1D83D73E0013950C /* LICENSE */,
+				94DA78DD1D83D73E0013950C /* README.md */,
 			);
 			path = WorldClock;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				9466915C1D40E95A00C37386 /* Main.storyboard in Resources */,
 				9466915A1D40E95A00C37386 /* Assets.xcassets in Resources */,
+				94DA78DE1D83D73E0013950C /* LICENSE in Resources */,
 				9466915B1D40E95A00C37386 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +320,7 @@
 				946691621D40E95A00C37386 /* CountryListViewController.m in Sources */,
 				9466915F1D40E95A00C37386 /* Clock.swift in Sources */,
 				946691691D40E95A00C37386 /* TableViewDataSource.swift in Sources */,
+				94DA78DF1D83D73E0013950C /* README.md in Sources */,
 				946691671D40E95A00C37386 /* main.m in Sources */,
 				9466915E1D40E95A00C37386 /* CityCell.swift in Sources */,
 			);
