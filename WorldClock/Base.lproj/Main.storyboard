@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Clock View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClockViewController" customModule="WorldClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-yI-f1t">
+                                <rect key="frame" x="0.0" y="359" width="600" height="241"/>
+                                <connections>
+                                    <segue destination="Mxj-eb-hWg" kind="embed" id="BwU-PM-He4"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygx-gt-QEB" customClass="Clock" customModule="WorldClock" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="303"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام شهر" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-7P-3gS">
+                                <rect key="frame" x="265" y="321" width="70.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xZv-7P-3gS" firstAttribute="top" secondItem="Ygx-gt-QEB" secondAttribute="bottom" constant="-2" id="0FO-i2-oTN"/>
+                            <constraint firstItem="Ygx-gt-QEB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="E4C-lU-eYw"/>
+                            <constraint firstItem="wTo-yI-f1t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="2/5" constant="1" id="Fyx-0l-2Zf"/>
+                            <constraint firstItem="xZv-7P-3gS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ID6-Lk-fcn"/>
+                            <constraint firstAttribute="trailing" secondItem="wTo-yI-f1t" secondAttribute="trailing" id="N8m-MO-JBZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wTo-yI-f1t" secondAttribute="bottom" id="X2J-nH-L8V"/>
+                            <constraint firstAttribute="trailing" secondItem="Ygx-gt-QEB" secondAttribute="trailing" id="b4P-xo-PHT"/>
+                            <constraint firstItem="wTo-yI-f1t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oVt-y9-wmK"/>
+                            <constraint firstItem="wTo-yI-f1t" firstAttribute="top" secondItem="xZv-7P-3gS" secondAttribute="bottom" constant="8" id="rUF-eL-1N9"/>
+                            <constraint firstItem="Ygx-gt-QEB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zoA-wg-BzS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="xZv-7P-3gS" id="HSN-Ey-Hx9"/>
+                        <outlet property="clock" destination="Ygx-gt-QEB" id="5Z2-ou-vG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Country List View Controller-->
+        <scene sceneID="KUU-BN-G2l">
+            <objects>
+                <tableViewController id="Mxj-eb-hWg" customClass="CountryListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L5k-kq-sCh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="241"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="DfN-qL-huE" customClass="CityCell" customModule="WorldClock" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DfN-qL-huE" id="kqv-cw-WT8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام شهر" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-js-tRE">
+                                            <rect key="frame" x="519" y="11" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="49B-RN-Ywb">
+                                            <rect key="frame" x="281.5" y="2.5" width="37" height="37"/>
+                                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TbA-js-tRE" firstAttribute="centerY" secondItem="kqv-cw-WT8" secondAttribute="centerY" id="C5E-F8-4J9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TbA-js-tRE" secondAttribute="trailing" constant="24" id="C99-wD-3eK"/>
+                                        <constraint firstItem="49B-RN-Ywb" firstAttribute="centerY" secondItem="kqv-cw-WT8" secondAttribute="centerY" id="JDf-o5-jWG"/>
+                                        <constraint firstItem="49B-RN-Ywb" firstAttribute="centerX" secondItem="kqv-cw-WT8" secondAttribute="centerX" id="pro-Y6-ULK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="49B-RN-Ywb" id="d6G-UH-LCf"/>
+                                    <outlet property="cityNameLabel" destination="TbA-js-tRE" id="rzl-al-A25"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mxj-eb-hWg" id="zqG-IK-Itq"/>
+                            <outlet property="delegate" destination="Mxj-eb-hWg" id="AAJ-Us-eXc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSR-Fc-ROT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="646.5"/>
+        </scene>
+    </scenes>
+</document>

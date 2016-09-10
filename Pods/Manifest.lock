@@ -1,0 +1,18 @@
+PODS:
+  - Agent (0.1.0)
+  - PMKVObserver (1.0.4):
+    - PMKVObserver/ObjC (= 1.0.4)
+    - PMKVObserver/Swift (= 1.0.4)
+  - PMKVObserver/ObjC (1.0.4)
+  - PMKVObserver/Swift (1.0.4):
+    - PMKVObserver/ObjC
+
+DEPENDENCIES:
+  - Agent
+  - PMKVObserver
+
+SPEC CHECKSUMS:
+  Agent: 132403dd0ddd766ec3d9ddc6483daa0669604406
+  PMKVObserver: 4cbd30edc518211aa18a927633bfe5f560cf464e
+
+COCOAPODS: 0.39.0
